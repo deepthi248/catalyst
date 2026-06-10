@@ -1,0 +1,6 @@
+.cards_list{
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-10);
+    flex-wrap: wrap;
+}
