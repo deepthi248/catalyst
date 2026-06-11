@@ -39,4 +39,34 @@ export const SAMPLE_JOBS: Job[] = [
     notes: 'Got rejected after round 2. Feedback was weak on DSA.',
     createdAt:  new Date("2026-03-25"),
   },
+  {
+    id: '4',
+    companyName: 'Razorpay',
+    role: 'Full Stack Developer',
+    url: 'https://razorpay.com/jobs/456',
+    status: 'rejected',
+    notes: 'First round done. System design round scheduled next week.',
+    createdAt:  new Date("2026-03-25"),
+  },
 ]
+
+
+
+export const getBadgeColor =(status:string)=> {
+    let card_color = ""
+    
+    switch (status){
+        case 'applied':
+            card_color ="purple"
+            break;
+            case 'interviewing':
+            card_color ="amber"
+            break;
+            case 'offered':
+            card_color ="good"
+            break;
+            case 'rejected':
+            card_color ="red"
+    }
+    return card_color;
+}

@@ -1,0 +1,7 @@
+.board_section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; align-items: flex-start;
+  margin: var(--space-12);
+  gap: var(--space-4);
+}

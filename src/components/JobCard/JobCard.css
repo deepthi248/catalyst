@@ -1,40 +1,38 @@
-
-.card{
-    background: var(--surface);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    padding: var(--space-2);
-    width: 200px;
-    border-radius: var(--r-xs);
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: var(--space-2);
+  flex:1;
+  border-radius: var(--r-xs);
+  margin: var(--space-2);
 }
 
-.amber:hover{
-    background: var(--amber-light);
-    border: 1px solid var(--amber);
+
+.amber:hover {
+  background: var(--amber-light);
+  border: 1px solid var(--amber);
 }
 
-.purple:hover{
-    background: var(--purple-light);
-        border: 1px solid var(--purple);
-
+.purple:hover {
+  background: var(--purple-light);
+  border: 1px solid var(--purple);
 }
-.green:hover{
-    background: var(--good-light);
-        border: 1px solid var(--good);
-
+.green:hover {
+  background: var(--good-light);
+  border: 1px solid var(--good);
 }
-.red:hover{
-    background: var(--red-light);
-        border: 1px solid var(--red);
-
+.red:hover {
+  background: var(--red-light);
+  border: 1px solid var(--red);
 }
-.card_header{
-    display: flex;
-    justify-content: space-between;
-    color: var(--ink3);
-    font-size: var(--text-base);
+.card_header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--ink3);
+  font-size: var(--text-base);
 }
-.company_name{
-     color: var(--ink);
-     font-size: var(--text-lg);
+.company_name {
+  color: var(--ink);
+  font-size: var(--text-lg);
 }

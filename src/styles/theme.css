@@ -1,73 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap");
 
 :root {
-
   /* FONTS */
-  --font-sans:  'Instrument Sans', sans-serif;  /* body text */
-  --font-heading: 'Syne', sans-serif;           /* titles, logo, big numbers */
-  --font-mono:  'JetBrains Mono', monospace;    /* code, filenames */
+  --font-sans: "Instrument Sans", sans-serif; /* body text */
+  --font-heading: "Syne", sans-serif; /* titles, logo, big numbers */
+  --font-mono: "JetBrains Mono", monospace; /* code, filenames */
 
   /* FONT SIZES */
-  --text-xs:   10px;
-  --text-sm:   11px;
+  --text-xs: 10px;
+  --text-sm: 11px;
   --text-base: 13px;
-  --text-md:   14px;
-  --text-lg:   16px;
-  --text-xl:   18px;
-  --text-2xl:  22px;
-  --text-3xl:  28px;
+  --text-md: 14px;
+  --text-lg: 16px;
+  --text-xl: 18px;
+  --text-2xl: 22px;
+  --text-3xl: 28px;
 
   /* TEXT COLOURS */
-  --ink:   #1a1814;   /* primary text */
-  --ink2:  #5a5650;   /* secondary text */
-  --ink3:  #9a9590;   /* muted / labels / placeholders */
+  --ink: #1a1814; /* primary text */
+  --ink2: #5a5650; /* secondary text */
+  --ink3: #9a9590; /* muted / labels / placeholders */
 
   /* BACKGROUND COLOURS */
-  --bg:       #f7f5f0;  /* page background*/
-  --surface:  #ffffff;  /* cards, sidebar, modals */
-  --surface2: #f0ede7;  /* inner panels, tag backgrounds, hover fills */
-
+  --bg: #f7f5f0; /* page background*/
+  --surface: #ffffff; /* cards, sidebar, modals */
+  --surface2: #f0ede7; /* inner panels, tag backgrounds, hover fills */
+  --count-bg: rgba(0, 0, 0, 0.06);
   /* BORDER COLOURS */
-  --border:  rgba(0, 0, 0, 0.07);  /* default subtle border */
-  --border2: rgba(0, 0, 0, 0.12);  /* stronger border, inputs */
+  --border: rgba(0, 0, 0, 0.07); /* default subtle border */
+  --border2: rgba(0, 0, 0, 0.12); /* stronger border, inputs */
 
   /* BRAND / ACCENT */
-  --accent:        #c94f1e;
-  --accent-light:  #fdf0eb;
+  --accent: #c94f1e;
+  --accent-light: #fdf0eb;
   --accent-border: rgba(201, 79, 30, 0.2);
 
   /* STATUS COLOURS */
-  --purple:       #6b52b8;   /* applied */
+  --purple: #6b52b8; /* applied */
   --purple-light: #f0edfc;
-  --amber:        #b87a10;   /* interviewing */
-  --amber-light:  #fdf5e3;
-  --good:         #1a7a3f;   /* offer / success */
-  --good-light:   #e8f5ed;
-  --red:          #b01c1c;   /* rejected / error */
-  --red-light:    #fdf0f0;
-  --teal:         #0e8a6a;   /* new / tips */
-  --teal-light:   #e8f7f3;
+  --amber: #b87a10; /* interviewing */
+  --amber-light: #fdf5e3;
+  --good: #1a7a3f; /* offer / success */
+  --good-light: #e8f5ed;
+  --red: #b01c1c; /* rejected / error */
+  --red-light: #fdf0f0;
+  --teal: #0e8a6a; /* new / tips */
+  --teal-light: #e8f7f3;
 
   /* SPACING */
-  --space-1:  4px;
-  --space-2:  8px;
-  --space-3:  12px;
-  --space-4:  16px;
-  --space-5:  20px;
-  --space-6:  24px;
-  --space-8:  32px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
   --space-10: 40px;
   --space-12: 48px;
 
   /* BORDER RADIUS */
-  --r-xs: 5px;   /* tags, tiny chips */
-  --r-sm: 8px;   /* buttons, inputs */
-  --r:    12px;  /* standard cards */
-  --r-lg: 16px;  /* large cards, modals */
+  --r-xs: 5px; /* tags, tiny chips */
+  --r-sm: 8px; /* buttons, inputs */
+  --r: 12px; /* standard cards */
+  --r-lg: 16px; /* large cards, modals */
 
   /* SHADOWS */
-  --shadow:    0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
-  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
 
   /* TRANSITIONS */
   --transition: all 0.15s ease;

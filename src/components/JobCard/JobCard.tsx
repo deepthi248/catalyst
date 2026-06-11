@@ -1,27 +1,9 @@
-import type { Job } from "../../types/jobs";
+import { getBadgeColor, type Job } from "../../types/jobs";
 
 type props = {
   jobCard: Job;
 };
 
-const getBadgeColor =(status:string)=> {
-    let card_color = ""
-    
-    switch (status){
-        case 'applied':
-            card_color ="purple"
-            break;
-            case 'interviewing':
-            card_color ="amber"
-            break;
-            case 'offered':
-            card_color ="green"
-            break;
-            case 'rejected':
-            card_color ="red"
-    }
-    return card_color;
-}
 
 const getDateDiff = (createdAt)=>{
     const millisecondsInDay: number = 1000 * 60 * 60 * 24;
