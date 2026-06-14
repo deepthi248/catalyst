@@ -8,7 +8,12 @@ export interface Job  {
     createdAt: Date;
 }
 
-
+export const COLUMN_CONFIG = [
+  { id: 'applied',      label: 'Applied' },
+  { id: 'interviewing', label: 'Interviewing' },
+  { id: 'offered',      label: 'Offered' },
+  { id: 'rejected',     label: 'Rejected' },
+]
 
 
 export const SAMPLE_JOBS: Job[] = [
@@ -47,6 +52,50 @@ export const SAMPLE_JOBS: Job[] = [
     status: 'rejected',
     notes: 'First round done. System design round scheduled next week.',
     createdAt:  new Date("2026-03-25"),
+  },{
+    id: '5',
+    companyName: 'Swiggy',
+    role: 'Senior Frontend Engineer',
+    url: 'https://swiggy.com/jobs/5',
+    status: 'interviewing',
+    notes: 'Recruiter reached out on LinkedIn. First round scheduled for next week.',
+    createdAt: new Date('2024-01-22'),
+  },
+  {
+    id: '6',
+    companyName: 'CRED',
+    role: 'React Developer',
+    url: 'https://cred.club/jobs/6',
+    status: 'offered',
+    notes: 'Got the offer! Package is good. Deciding between this and Razorpay.',
+    createdAt: new Date('2024-01-25'),
+  },
+  {
+    id: '7',
+    companyName: 'Meesho',
+    role: 'UI Engineer',
+    url: 'https://meesho.com/jobs/7',
+    status: 'rejected',
+    notes: 'Rejected after round 3. Feedback was weak system design knowledge.',
+    createdAt: new Date('2024-01-28'),
+  },
+  {
+    id: '8',
+    companyName: 'PhonePe',
+    role: 'Full Stack Developer',
+    url: 'https://phonepe.com/jobs/8',
+    status: 'applied',
+    notes: 'Applied through their careers page. Waiting to hear back.',
+    createdAt: new Date('2024-02-01'),
+  },
+  {
+    id: '9',
+    companyName: 'Groww',
+    role: 'Frontend Engineer',
+    url: 'https://groww.in/jobs/9',
+    status: 'interviewing',
+    notes: 'Two rounds done. Final round with the engineering manager tomorrow.',
+    createdAt: new Date('2024-02-03'),
   },
 ]
 
