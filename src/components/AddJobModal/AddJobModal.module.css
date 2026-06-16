@@ -1,0 +1,119 @@
+.modal_backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal_popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  width: 600px;
+  max-width: 90vw;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+}
+
+.modal_title_row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.modal_title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+}
+
+.modal_form {
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  font-family: var(--font-sans);
+}
+
+.modal_field label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--ink2);
+  font-family: var(--font-sans);
+}
+
+.modal_row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.modal_field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.modal_input,
+.modal_select,
+.modal_textarea {
+  padding: 10px var(--space-3);
+  border: 1px solid var(--border2);
+  border-radius: var(--r-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  color: var(--ink);
+  outline: none;
+  width: 100%;
+}
+
+.modal_input:focus,
+.modal_select:focus,
+.modal_textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+.modal_textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.modal_error {
+  font-size: var(--text-sm);
+  color: var(--red);
+  min-height: 16px;
+}
+
+.modal_optional {
+  font-size: var(--text-sm);
+  color: var(--ink3);
+  font-weight: 400;
+}
+
+.modal_footer {
+  display: flex;
+  justify-content: flex-end; /* aligns to right */
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--border);
+}
+
+.modal_close {
+  background: transparent;
+  border: 1px solid var(--border2);
+  border-radius: var(--r-sm);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: var(--text-md);
+  color: var(--ink2);
+}

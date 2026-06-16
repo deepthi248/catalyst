@@ -1,11 +1,14 @@
+.card_body {
+  flex: 1;
+  min-width: 0;
+}
 .cards_list {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  flex-wrap: wrap;
   background-color: var(--surface2);
   border-radius: var(--r-sm);
-  flex: 1
+  height: 100%; /* fill the card_body */
 }
 .cards_list_header {
   display: flex;
@@ -20,43 +23,43 @@
 
 .cards_list_status {
   text-transform: capitalize;
-      margin-left: var(--space-2);
-
+  margin-left: var(--space-2);
 }
 .cards_list_count {
   background: var(--count-bg);
   border-radius: 50%;
-  padding: 2px 8px;
+  width: 20px;
+  height: 20px;
   font-size: var(--text-sm);
   color: var(--ink3);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 24px;
+  flex-shrink: 0;
 }
-.status_div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.status_div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.dot{
-    width: var(--space-2);
-    height: var(--space-2);
-    border-radius: 50%;
-}
-
-.red_bg{
-    background:var(--red);
+.dot {
+  width: var(--space-2);
+  height: var(--space-2);
+  border-radius: 50%;
 }
 
-.purple_bg{
-    background:var(--purple);
+.red_bg {
+  background: var(--red);
 }
 
-.good_bg{
-    background:var(--good);
+.purple_bg {
+  background: var(--purple);
 }
 
-.amber_bg{
-    background:var(--amber);
+.good_bg {
+  background: var(--good);
+}
+
+.amber_bg {
+  background: var(--amber);
 }

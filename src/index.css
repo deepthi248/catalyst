@@ -1,3 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.btn {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--r-sm);
+  font-size: var(--text-md);
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  cursor: pointer;
+  border: 1px solid var(--border2);
+  background: var(--surface);
+  color: var(--ink);
+  transition: var(--transition);
+}
+
+.btn_primary {
+  background: var(--accent);
+  color: var(--surface);
+  border-color: var(--accent);
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}

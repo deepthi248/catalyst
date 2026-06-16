@@ -1,7 +1,28 @@
 .board_section {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; align-items: flex-start;
-  margin: var(--space-12);
+  align-items: flex-start;
+  padding: var(--space-6) var(--space-12);
   gap: var(--space-4);
+}
+
+.pipeline_page {
+  display: flex;
+  flex-direction: column;
+}
+
+.pipeline_header {
+  display: flex;
+  background: var(--surface);
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-6) var(--space-12);
+  border-bottom: 1px solid var(--border);
+}
+
+.pipeline_title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--fw-semibold);
+  color: var(--ink);
 }
