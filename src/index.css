@@ -1,7 +1,11 @@
+body {
+  font-family: var(--font-sans);   /* fixes fonts across entire page */
+}
+
 .btn {
   padding: var(--space-2) var(--space-4);
   border-radius: var(--r-sm);
-  font-size: var(--text-md);
+  font-size: var(--text-base);     /* was text-md, base matches prototype */
   font-family: var(--font-sans);
   font-weight: var(--fw-medium);
   cursor: pointer;
@@ -16,6 +20,13 @@
   color: var(--surface);
   border-color: var(--accent);
 }
+
+.filter_btn_active {
+  color: var(--accent);
+  border-color: var(--accent-border);
+  background: var(--accent-light);
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }

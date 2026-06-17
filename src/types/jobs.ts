@@ -112,7 +112,7 @@ export const getBadgeColor =(status:string)=> {
             card_color ="amber"
             break;
             case 'offered':
-            card_color ="good"
+            card_color ="green"
             break;
             case 'rejected':
             card_color ="red"

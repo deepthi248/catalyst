@@ -5,9 +5,10 @@ import { useDroppable } from "@dnd-kit/core";
 type props = {
   jobCards: Job[];
   status: string;
+  filterKeyWord:string;
 };
 
-export const KanbanColumn = ({ jobCards, status }: props) => {
+export const KanbanColumn = ({ jobCards, status,filterKeyWord }: props) => {
   const { setNodeRef } = useDroppable({ id: status });
   return (
     <div className="card_body" ref={setNodeRef}>
@@ -22,7 +23,7 @@ export const KanbanColumn = ({ jobCards, status }: props) => {
         </div>
         <div className="card_body">
           {jobCards.map((job) => (
-            <JobCard jobCard={job} key={job.id}  />
+            <JobCard jobCard={job} key={job.id}filterKeyWord={filterKeyWord}  />
           ))}
         </div>
       </div>

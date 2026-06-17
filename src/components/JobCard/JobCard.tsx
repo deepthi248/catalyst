@@ -3,26 +3,34 @@ import { useDraggable } from "@dnd-kit/core";
 
 type props = {
   jobCard: Job;
+  filterKeyWord: string;
 };
 
-const getDateDiff = (createdAt) => {
-  const millisecondsInDay: number = 1000 * 60 * 60 * 24;
-  const timeDiff: number = Date.now() - createdAt.getTime();
-  const differenceInDays: number = Math.floor(timeDiff / millisecondsInDay);
-  return differenceInDays;
+const getDateDiff = (createdAt: Date) => {
+  const date = typeof createdAt === "string" ? new Date(createdAt) : createdAt;
+  const millisecondsInDay = 1000 * 60 * 60 * 24;
+  const timeDiff = Date.now() - date.getTime();
+  return Math.floor(timeDiff / millisecondsInDay);
 };
 
-export const JobCard = ({ jobCard }: props) => {
+export const JobCard = ({ jobCard, filterKeyWord }: props) => {
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
     id: jobCard.id,
   });
   const style = {
-  transform: transform ? `translate(${transform.x}px, ${transform.y}px)` : undefined
-}
+    transform: transform
+      ? `translate(${transform.x}px, ${transform.y}px)`
+      : undefined,
+  };
+  const isMatch =
+    !filterKeyWord ||
+    jobCard.companyName.toLowerCase().includes(filterKeyWord.toLowerCase()) ||
+    jobCard.role.toLowerCase().includes(filterKeyWord.toLowerCase());
+
   const badgeColor = getBadgeColor(jobCard.status);
   return (
     <div
-      className={`card ${badgeColor}`}
+      className={`card ${badgeColor} ${filterKeyWord && !isMatch ? "card_dimmed" : ""} ${filterKeyWord && isMatch ? "card_highlighted" : ""}`}
       key={jobCard.id}
       style={style}
       ref={setNodeRef}

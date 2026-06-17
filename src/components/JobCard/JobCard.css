@@ -1,13 +1,15 @@
 .card {
   background: var(--surface);
-  border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  padding: var(--space-2);
-  flex:1;
-  border-radius: var(--r-xs);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: var(--space-4); /* was 14px — bump to 16px */
+  cursor: grab;
+  transition: var(--transition);
+  font-family: var(--font-sans);
+  flex: 1;
   margin: var(--space-2);
 }
-
 
 .amber:hover {
   background: var(--amber-light);
@@ -19,8 +21,8 @@
   border: 1px solid var(--purple);
 }
 .green:hover {
-  background: var(--good-light);
-  border: 1px solid var(--good);
+  background: var(--green-light);
+  border: 1px solid var(--green);
 }
 .red:hover {
   background: var(--red-light);
@@ -35,4 +37,14 @@
 .company_name {
   color: var(--ink);
   font-size: var(--text-lg);
+}
+
+.card_dimmed {
+  opacity: 0.3;
+  pointer-events: none; /* can't drag dimmed cards */
+}
+
+.card_highlighted {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-light);
 }
