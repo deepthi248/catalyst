@@ -47,7 +47,8 @@
   padding: var(--space-6) var(--space-12);
   overflow: hidden;
 }
-/* label above each panel — used by DocumentPage for JD section */
+
+/* shared label above each section */
 .panel_label {
   font-family: var(--font-sans);
   font-size: var(--text-xs);
@@ -65,43 +66,120 @@
   flex-direction: column;
 }
 
+/* JD section */
 .jd_section {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
 }
 
-.jd_empty {
+.jd_card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--r);
   padding: var(--space-5);
-}
-
-.jd_empty p {
-  margin: 0;
-  font-family: var(--font-sans);
-  font-size: var(--text-sm);
-  color: var(--ink3);
-}
-/* error state when PDF fails to load */
-.pdf_error {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: var(--space-4);
-  padding: var(--space-8) var(--space-5);
-  background: var(--surface2);
-  text-align: center;
 }
 
-.pdf_error_msg {
+/* empty state */
+.jd_empty_state {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.jd_empty_title {
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  font-weight: var(--fw-medium);
+  color: var(--ink);
+  margin: 0;
+}
+
+.jd_empty_sub {
   font-family: var(--font-sans);
   font-size: var(--text-sm);
-  color: var(--red);
-  max-width: 320px;
-  line-height: 1.5;
+  color: var(--ink3);
   margin: 0;
+}
+
+/* filled state */
+.jd_filled_state {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.jd_filled_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.jd_filled_title {
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  font-weight: var(--fw-semibold);
+  color: var(--ink);
+
+}
+
+.jd_badge {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-medium);
+  color: var(--purple);
+  background: var(--purple-light);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--r-lg);
+}
+
+/* text preview with fade */
+.jd_preview_wrapper {
+  position: relative;
+  max-height: 80px;
+  overflow: hidden;
+}
+
+.jd_preview_text {
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  color: var(--ink2);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.jd_preview_wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--space-8);
+  background: linear-gradient(transparent, var(--surface));
+  pointer-events: none;
+}
+
+/* add/change JD button */
+.open_jd_modal {
+  align-self: center;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--fw-medium);
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--border2);
+  border-radius: var(--r-sm);
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.open_jd_modal:hover {
+  background: var(--surface2);
 }

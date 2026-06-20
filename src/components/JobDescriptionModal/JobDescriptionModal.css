@@ -1,0 +1,162 @@
+.jd_backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+}
+
+.jd_popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  width: 600px;
+  max-width: 90vw;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  z-index: 101;
+}
+
+.jd_modal_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--border);
+}
+
+.jd_modal_title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--fw-semibold);
+  color: var(--ink);
+}
+
+.jd_modal_close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-8);
+  height: var(--space-8);
+  border: 1px solid var(--border2);
+  border-radius: var(--r-sm);
+  background: transparent;
+  cursor: pointer;
+  color: var(--ink2);
+  transition: var(--transition);
+}
+
+.jd_modal_close:hover {
+  background: var(--surface2);
+  color: var(--ink);
+}
+
+.jd_modal_body {
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.jd_textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: var(--space-3);
+  border: 1px solid var(--border2);
+  border-radius: var(--r-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  color: var(--ink);
+  line-height: 1.6;
+  resize: none;
+  outline: none;
+  transition: var(--transition);
+}
+
+.jd_textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+.jd_textarea_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.jd_paste_btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--ink2);
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: var(--r-sm);
+  padding: var(--space-2) var(--space-3);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.jd_paste_btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.jd_char_count {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--ink3);
+  transition: var(--transition);
+}
+
+.jd_char_count.active {
+  color: var(--accent);
+  font-weight: var(--fw-medium);
+}
+
+.jd_modal_footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--border);
+}
+
+.jd_cancel_btn {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--fw-medium);
+  color: var(--ink2);
+  background: transparent;
+  border: 1px solid var(--border2);
+  border-radius: var(--r-sm);
+  padding: var(--space-2) var(--space-5);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.jd_cancel_btn:hover {
+  background: var(--surface2);
+}
+
+.jd_save_btn {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--fw-medium);
+  color: #fff;
+  background: var(--ink);
+  border: 1px solid transparent;
+  border-radius: var(--r-sm);
+  padding: var(--space-2) var(--space-5);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.jd_save_btn:hover {
+  opacity: 0.85;
+}

@@ -15,6 +15,7 @@ import './components/CVUpload/CVUplaod.css'
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 import { pdfjs } from "react-pdf";
+import './components/JobDescriptionModal/JobDescriptionModal.css'
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
