@@ -2,18 +2,16 @@ import { Dialog, Field, Form } from "@base-ui/react";
 import type { Job } from "../../types/jobs";
 import styles from "./AddJobModal.module.css";
 import { toast } from "sonner";
+import { useJobs } from "../../context/jobsContext";
 
 type props = {
-  AddJobCard: (job_to_be_added: Job) => void;
   openAddJobModal: boolean;
   setOpenAddJobModal: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const AddJobModal = ({
-  openAddJobModal,
-  setOpenAddJobModal,
-  AddJobCard,
-}: props) => {
+
+export const AddJobModal = ({ openAddJobModal, setOpenAddJobModal }: props) => {
+  const { addJob } = useJobs();
   return (
     <Dialog.Root
       open={openAddJobModal}
@@ -39,7 +37,7 @@ export const AddJobModal = ({
                 createdAt: new Date(),
               };
 
-              AddJobCard(newJob);
+              addJob(newJob);
               toast.success(
                 `${formValues.company_name} added to your pipeline!`,
               );
