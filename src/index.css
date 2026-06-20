@@ -1,5 +1,6 @@
 body {
-  font-family: var(--font-sans);   /* fixes fonts across entire page */
+  font-family: var(--font-sans); 
+  margin: 0px;  
 }
 
 .btn {
