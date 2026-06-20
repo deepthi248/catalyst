@@ -1,10 +1,4 @@
-import { pdfjs } from "react-pdf";
 import { CvUpload } from "../../components/CVUpload/CVUpload";
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url,
-).toString();
 
 export const DocumentsPage = () => {
   return (
@@ -20,7 +14,7 @@ export const DocumentsPage = () => {
       <div className="documents_grid">
         <CvUpload />
         <div className="jd_section">
-          <p className="cv_label">JOB DESCRIPTION</p>
+          <p className="panel_label">JOB DESCRIPTION</p>
           <div className="jd_empty">
             <p>Coming next...</p>
           </div>

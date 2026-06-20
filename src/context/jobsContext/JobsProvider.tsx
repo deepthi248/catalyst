@@ -12,6 +12,8 @@ export const JobsProvider = ({ children }: { children: React.ReactNode }) => {
     id: string;
     status: Job["status"];
   }) => {
+    const exists = jobs.some((job) => job.id === id);
+    if (!exists) return;
     setJobs((prev) =>
       prev.map((job) => (job.id === id ? { ...job, status } : job)),
     );

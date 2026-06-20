@@ -14,6 +14,14 @@ import "./pages/DocumentsPage/DocumentPage.css";
 import './components/CVUpload/CVUplaod.css'
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
+import { pdfjs } from "react-pdf";
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.mjs",
+  import.meta.url,
+).toString()
+
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
