@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { getBadgeColor, type Job } from "../../types/jobs";
 import { useDraggable } from "@dnd-kit/core";
 
@@ -27,6 +28,7 @@ export const JobCard = ({ jobCard, filterKeyWord }: props) => {
     jobCard.companyName.toLowerCase().includes(filterKeyWord.toLowerCase()) ||
     jobCard.role.toLowerCase().includes(filterKeyWord.toLowerCase());
 
+  const navigate = useNavigate()
   const badgeColor = getBadgeColor(jobCard.status);
   return (
     <div
@@ -36,6 +38,8 @@ export const JobCard = ({ jobCard, filterKeyWord }: props) => {
       ref={setNodeRef}
       {...listeners}
       {...attributes}
+      onClick={ ()=> navigate(`/jobs/${jobCard.id}/documents`)
+}
     >
       <div className="card_header">
         <span className="company_name">{jobCard.companyName}</span>
