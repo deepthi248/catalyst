@@ -151,7 +151,7 @@
 /* move cv_label here — CVUpload owns this class */
 .cv_label {
   font-family: var(--font-sans);
-  font-size: var(--text-xs);
+  font-size: var(--text-md);
   font-weight: var(--fw-semibold);
   letter-spacing: 0.1em;
   text-transform: uppercase;

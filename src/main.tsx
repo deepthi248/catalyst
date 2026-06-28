@@ -11,17 +11,19 @@ import "./practice";
 import "./pages/JobBoard/JobBoard.css";
 import "./components/sidebar/SideBar.css";
 import "./pages/DocumentsPage/DocumentPage.css";
-import './components/CVUpload/CVUplaod.css'
+import "./components/CVUpload/CVUplaod.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 import { pdfjs } from "react-pdf";
-import './components/JobDescriptionModal/JobDescriptionModal.css'
+import "./components/JobDescriptionModal/JobDescriptionModal.css";
+import "./components/TextEditor/TextEditor.css";
+
+
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
   import.meta.url,
-).toString()
-
+).toString();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
